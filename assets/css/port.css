@@ -1,0 +1,1526 @@
+/* ---------------- portfolio ---------------- */
+
+
+
+
+/* ///////// port-main ///////// */
+.port-list .sc-port {
+    margin-top: 50px;
+}
+.port-list .sc-port .headline {
+    text-align: center;
+}
+.port-list .select-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+.port-list .select-box strong {
+    font-weight: bold;
+}
+.port-list .select-box select {
+    margin-right: 25px;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+.port-list .select-box fieldset {
+    display: flex;
+    gap: 24px;
+}
+
+.port-list .select-box input {
+    border-bottom: 2px solid #000;
+    height: 100%;
+    width: 245px;
+}
+.port-list .select-box label {
+    position: relative;
+    height: 42px;
+}
+.port-list .select-box .ico-search {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    background: url(../img/ico-search.png) no-repeat center / 100%;
+}
+.port-list input[type="text"]:focus {
+    outline: none;
+}
+.port-list input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+.port-list .custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    min-width: 210px;
+    cursor: pointer;
+}
+.port-list .custom-select-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 14px;
+    height: 10px;
+    transform: translateY(-50%);
+    background: url(../img/ico-drop.png) no-repeat center / 100%;
+}
+.port-list .custom-select-wrapper:focus {
+    border-bottom: 2px solid #000;
+    outline: none;
+}
+.port-list .custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    padding: 10px 10px 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+.port-list .custom-select:focus {
+    border-color: #007BFF;
+    background-color: #e7f3ff;
+    outline: none;
+}
+.port-list .port-list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 62px;
+    column-gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.port-list .port-item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.port-list .port-item:hover {
+    border: 2px solid #0046bf;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.port-list .port-item .thumb-area,
+.port-list .port-item .info-area {
+    flex: 1;
+}
+.port-list .port-item .info-area {
+    padding: 28px 29px 37px;
+}
+.port-list .port-item .info-area .subtit {
+    line-height: 21px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #0046bf;
+    letter-spacing: -0.025em;
+}
+.port-list .port-item .info-area .title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 12px;
+    line-height: 30px;
+    font-size: 24px;
+    color: #000000;
+    letter-spacing: -0.025em;
+}
+.port-list .port-item .info-area .date {
+    display: block;
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+    font-weight: bold;
+}
+.port-list .btn-down {
+    position: absolute;
+    right: 28px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000 url(../img/ico-down-white.png) no-repeat center / 12px 15px;
+    z-index: 1000;
+}
+.port-list .btn-down:hover {
+    background: #0046bf url(../img/ico-down-white.png) no-repeat center / 12px 15px;
+}
+
+
+
+
+
+
+/* 검색결과없을 떄 */
+.port-list .port-none strong {
+    font-weight: bold;
+}
+.port-list .port-none div {
+    margin-top: 40px;
+    min-height: 375px;
+    padding-top: 85px;
+    text-align: center;
+    border-radius: 20px;
+    background: #f5f5f5;
+}
+.port-list .port-none div img {
+    display: inline-block;
+}
+.port-list .port-none div p {
+    margin-top: 26px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #000;
+    letter-spacing: -0.025em;
+}
+
+
+
+
+
+
+
+
+
+/* ///////// port-detail ///////// */
+.port-detail .sc-detail {
+    text-align: center;
+}
+.port-detail .sc-detail .category {
+    display: block;
+    margin-top: 78px;
+    line-height: 21px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #0046bf;
+    letter-spacing: -0.025em;
+}
+.port-detail .sc-detail .title {
+    line-height: 50px;
+    font-size: 32px;
+    color: #000000;
+    margin-top: 6px;
+}
+.port-detail .sc-detail .date {
+    display: block;
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666666;
+}
+.port-detail .sc-detail .thumb-area {
+    margin-top: 40px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+.port-detail .sc-detail .thumb-area img {
+    width: 100%;
+}
+.port-detail .sc-detail .img-box {
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.port-detail .sc-detail .img-box .desc {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #000;
+    letter-spacing: -0.025em;
+}
+.port-detail .sc-detail .img-box .img-tit {
+    margin-left: 13px;
+}
+.port-detail .sc-detail .img-box .btn-down {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+    color: #000;
+    letter-spacing: -0.025em;
+    margin-left: 40px;
+    border-radius: 4px;
+    border: 1px solid #000;
+    height: 40px;
+    width: 120px;
+}
+.port-detail .sc-detail .img-box .btn-down::after {
+    content: '';
+    display: inline-block;
+    margin-left: 10px;
+    width: 12px;
+    height: 14px;
+    background: url(../img/ico-down.png) no-repeat center / 100%;
+}
+.port-detail .sc-detail .info-area {
+    margin-top: 34px;
+}
+.port-detail .sc-detail .info-area p {
+    font-size: 18px;
+    color: #666666;
+    letter-spacing: -0.025em;
+    line-height: 30px;
+    text-align: center;
+}
+.port-detail .sc-detail .navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f5f5f5;
+    margin-top: 56px;
+    border-radius: 20px;
+    padding: 37px 41px;
+}
+.port-detail .sc-detail .navigation::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #c4c4c4;
+    width: 1px;
+    height: 30%;
+}
+.port-detail .sc-detail .navigation a {
+    display: flex;
+    align-items: center;
+}
+.port-detail .sc-detail .navigation .prev-post::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 32px;
+    margin-right: 25px;
+    background: url(../img/ico-leftarr.png) no-repeat center / 100%;
+}
+.port-detail .sc-detail .navigation .next-post::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 32px;
+    margin-left: 25px;
+    background: url(../img/ico-rightarr.png) no-repeat center / 100%;
+}
+.port-detail .sc-detail .navigation a {
+    font-size: 18px;
+    color: #000;
+    line-height: 30px;
+    letter-spacing: -0.025em;
+}
+.port-detail .sc-detail .back-to-list {
+    display: inline-block;
+    margin: 60px auto 0;
+}
+.port-detail .sc-detail .back-to-list a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    border: 1px solid #0046bf;
+    color: #0046bf;
+    border-radius: 4px;
+    width: 160px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+/* port-admin 공통 */
+.admin .gnb-item.logout {
+    border: 1px solid #000;
+    border-radius: 4px;
+    width: 118px;
+    height: 40px;
+    font-size: 16px;
+}
+.admin .gnb-item.logout a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.admin .gnb-item:not(:first-child) {
+    margin-left: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+/* ///////// port-admin-list ///////// */
+.port-admin-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.port-admin-list th, 
+.port-admin-list td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 18px 0 19px;
+}
+.port-admin-list th {
+    border-top: 2px solid #000;
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+.port-admin-list table td {
+    cursor: pointer;
+}
+.port-admin-list table td:nth-child(1),
+.port-admin-list table td:nth-child(2) {
+    width: 70px;
+}
+.port-admin-list table td img {
+    width: 88px;
+    height: 38px;
+    border-radius: 4px;
+}
+.port-admin-list table tr.click {
+    background: #eff8ff;
+}
+.port-admin-list table .img-tit div {
+    margin: 0 auto;
+    width: 373px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-size: 18px;
+}
+.port-admin-list table .img-tit.file div {
+    font-weight: normal;
+    width: 200px;
+}
+.port-admin-list table .img-td {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.port-admin-list .select-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.port-admin-list .select-box strong {
+    font-weight: bold;
+}
+.port-admin-list .select-box select {
+    margin-right: 25px;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+.port-admin-list .select-box fieldset {
+    display: flex;
+    gap: 24px;
+}
+.port-admin-list .select-box input {
+    border-bottom: 2px solid #000;
+    height: 100%;
+    width: 245px;
+}
+.port-admin-list .select-box label {
+    position: relative;
+}
+.port-admin-list .select-box .ico-search {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    background: url(../img/ico-search.png) no-repeat center / 100%;
+}
+.port-admin-list input[type="text"]:focus {
+    outline: none;
+}
+.port-admin-list input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+.port-admin-list .custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 210px;
+    cursor: pointer;
+}
+.port-admin-list .custom-select-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 14px;
+    height: 10px;
+    transform: translateY(-50%);
+    background: url(../img/ico-drop.png) no-repeat center / 100%;
+}
+.port-admin-list .custom-select-wrapper:focus {
+    border-bottom: 2px solid #000;
+    outline: none;
+}
+.port-admin-list .custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    padding: 10px 10px 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+.custom-select:focus {
+    border-color: #007BFF;
+    background-color: #e7f3ff;
+    outline: none;
+}
+.port-admin-list .control-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+.port-admin-list .control-box  strong {
+    font-weight: bold;
+}
+
+.port-admin-list .control-box .btn button {
+    font-size: 16px;
+    font-weight: bold;
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+}
+.port-admin-list .control-box .btn .del {
+    border: 1px solid #0046bf;
+    color: #0046bf;
+}
+.port-admin-list .control-box .btn .reg {
+    background: #0046bf;
+    color: #fff;
+}
+
+.port-admin-list .pagination-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.port-admin-list .pagination-box button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e4e4e4;
+    margin-right: 6px;
+}
+.port-admin-list .pagination-box button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 11px;
+    transform: translate(-50%, -50%);
+}
+.port-admin-list .pagination-box button.btn-first::before {
+    background: url(../img/ico-firstBtn.png) no-repeat center / 100%;
+    width: 8px;
+    height: 12px;
+}
+.port-admin-list .pagination-box button.btn-prev::before {
+    background: url(../img/ico-prevBtn.png) no-repeat center / 100%;
+}
+.port-admin-list .pagination-box button.btn-next::before {
+    background: url(../img/ico-nextBtn.png) no-repeat center / 100%;
+}
+.port-admin-list .pagination-box button.btn-last::before {
+    background: url(../img/ico-lastBtn.png) no-repeat center / 100%;
+    width: 8px;
+    height: 12px;
+}
+.port-admin-list .pagination-box .page-list {
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+}
+.port-admin-list .pagination-box .page-item {
+    width: 23px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+}
+.port-admin-list .pagination-box .page-item a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #888888;
+}
+.port-admin-list .pagination-box .page-item.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+.port-admin-list .pagination-box .page-item.active a {
+    font-weight: bold;
+    color: #000;
+}
+.port-admin-list .pcDisplay {
+    display: block;
+}
+.port-admin-list .nopcDisplay {
+    display: none;
+}
+
+
+
+
+/* pc checkbox */
+.port-admin-list .pcDisplay td:nth-child(1) {
+    position: relative;
+}
+.port-admin-list .pcDisplay input[type="checkbox"] { 
+	position:absolute; 
+    width:1px; 
+    height:1px; 
+    padding:0; 
+    margin:-1px; 
+    overflow:hidden; 
+    clip:rect(0,0,0,0); 
+    border:0; 
+}
+.port-admin-list .pcDisplay input[type="checkbox"] + label { 
+	display:inline-block; 
+    position:absolute; 
+    padding-left:26px; 
+    cursor:pointer; 
+    transition: 0.3s;
+}
+.port-admin-list .pcDisplay input[type="checkbox"] + label:before { 
+	content:''; 
+    position:absolute; 
+    left:0; 
+    top:50%;
+    transform: translateY(-50%); 
+    width:28px; 
+    height:28px; 
+    text-align:center; 
+    background:#fff; 
+    border:1px solid #ccc; 
+    box-sizing:border-box; 
+    border-radius: 4px;
+}
+.port-admin-list .pcDisplay input[type="checkbox"]:checked + label:after { 
+	content: ''; 
+    position:absolute; 
+    left:0; 
+    top:50%;
+    transform: translateY(-50%); 
+    width:28px; 
+    height:28px; 
+    background: url(../img/ico-chk.jpg) no-repeat center / 100%;
+    border-radius: 4px;
+}
+
+
+
+/* 모바일 checkbox */
+.port-admin-list .nopcDisplay input[type="checkbox"] { 
+	position:absolute; 
+    width:1px; 
+    height:1px; 
+    padding:0; 
+    margin:-1px; 
+    overflow:hidden; 
+    clip:rect(0,0,0,0); 
+    border:0; 
+}
+.port-admin-list .nopcDisplay input[type="checkbox"] + label { 
+	display:inline-block; 
+    position:relative; 
+    padding-left:26px; 
+    cursor:pointer; 
+    transition: 0.3s;
+}
+.port-admin-list .nopcDisplay input[type="checkbox"] + label:before { 
+	content:''; 
+    position:absolute; 
+    left:0; 
+    top:0; 
+    width:24px; 
+    height:24px; 
+    text-align:center; 
+    background:#fff; 
+    border:1px solid #ccc; 
+    box-sizing:border-box; 
+    border-radius: 4px;
+}
+.port-admin-list .nopcDisplay input[type="checkbox"]:checked + label:after { 
+	content: ''; 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:24px; 
+    height:24px; 
+    background: url(../img/ico-chk.jpg) no-repeat center / 100%;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+/* ///////// port-admin-view ///////// */
+.port-admin-view .container {
+    margin-top: 60px;
+}
+.port-admin-view .container .container-cont {
+    padding: 50px 60px 60px;
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+.port-admin-view form {
+    display: flex;
+    flex-direction: column;
+}
+.port-admin-view .form-group:not(:last-child) {
+    margin-bottom: 55px;
+
+}
+.port-admin-view .form-group.title {
+    position: relative;
+}
+.port-admin-view .form-group.title .remove-btn {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.port-admin-view .form-group .txt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.port-admin-view .form-group .txt > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+}
+.port-admin-view .form-group .txt span {
+    font-size: 18px;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    /* flex: 1; */
+    width: 90%;
+    overflow-wrap: break-word;
+}
+.port-admin-view .form-group.date .group-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.port-admin-view .form-group .remove-btn {
+    position: relative;
+}
+.port-admin-view .form-group .remove-btn {
+    background: url(../img/ico-del.png) no-repeat center / 100%;
+    display: inline-block;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.port-admin-view .form-group .thumbnail-container {
+    position: relative;
+}
+.port-admin-view .form-group .thumbnail-container .remove-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+.port-admin-view p {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.port-admin-view label {
+    display: block;
+    width: 118px;
+}
+.port-admin-view .thumbnail span {
+    font-weight: 500;
+    color: #666666;
+    font-size: 18px;
+    line-height: 26px;
+}
+.port-admin-view input[type="text"],
+.port-admin-view input[type="file"],
+.port-admin-view input[type="date"],
+.port-admin-view textarea,
+.port-admin-view select {
+    width: 100%;
+    padding-bottom: 7px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+.port-admin-view select {
+    display: block;
+    width: 250px;
+    padding-bottom: 0;
+    height: 40px;
+}
+.port-admin-view input[type="text"] {
+    padding-bottom: 0;
+    height: 40px;
+    padding-right: 50px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+.port-admin-view select:focus,
+.port-admin-view textarea:focus,
+.port-admin-view input:focus {
+    outline: none;
+}
+
+.port-admin-view input[type="date"] {
+    border: none;
+    width: auto;
+}
+
+.port-admin-view .thumbnail-container {
+    position: relative;
+    width: 250px;
+    height: 107px;
+    margin-top: 10px;
+}
+.port-admin-view #file, .port-admin-view #thumbnail {
+    display: none;
+}
+
+.port-admin-view .btn-admin-file,
+.port-admin-view .btn-admin-thumb,
+.port-admin-view .btn-admin-date {
+    width: 118px;
+    height: 40px;
+    color:  #0046bf;
+    border: 1px solid #0046bf;
+    background: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.port-admin-view .thumbnail-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.port-admin-view .input-cont {
+    margin-top: 17px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    line-height: 30px;
+    color: #000;
+    font-size: 18px;
+    padding: 23px 30px;
+}
+.port-admin-view button[type="submit"] {
+    margin: 60px auto 0;
+    background-color: #0046bf;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.port-admin-view button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ///////// port-submit ///////// */
+.port-submit .port-title {
+    color: #000;
+    margin-top: 67px;
+    text-align: center;
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 70px;
+}
+.port-submit .container {
+    margin-top: 50px;
+}
+.port-submit .container {
+    margin-top: 60px;
+}
+.port-submit .container .container-cont {
+    padding: 50px 60px 60px;
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+.port-submit form {
+    display: flex;
+    flex-direction: column;
+}
+.port-submit .form-group:not(:last-child) {
+    margin-bottom: 55px;
+}
+.port-submit .form-group.title {
+    position: relative;
+}
+.port-submit .form-group.title .remove-btn {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+.port-submit .form-group .txt {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.port-submit .form-group .txt > div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 0;
+}
+.port-submit .form-group .txt span {
+    font-size: 18px;
+    /* white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    /* flex: 1; */
+    width: 90%;
+    overflow-wrap: break-word;
+}
+.port-submit .form-group.date .group-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.port-submit .form-group .remove-btn {
+    position: relative;
+}
+.port-submit .form-group .remove-btn {
+    background: url(../img/ico-del.png) no-repeat center / 100%;
+    display: inline-block;
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.port-submit .form-group .thumbnail-container {
+    position: relative;
+}
+.port-submit .form-group .thumbnail-container .remove-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+.port-submit p {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.port-submit label {
+    display: block;
+    width: 118px;
+}
+.port-admin-view .thumbnail span {
+    font-weight: 500;
+    color: #666666;
+    font-size: 18px;
+    line-height: 26px;
+}
+.port-submit input[type="text"],
+.port-submit input[type="file"],
+.port-submit input[type="date"],
+.port-submit textarea,
+.port-submit select {
+    width: 100%;
+    padding-bottom: 7px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+.port-submit textarea:focus::placeholder {
+    opacity: 0;
+}
+.port-submit select {
+    display: block;
+    width: 250px;
+    padding-bottom: 0;
+    height: 40px;
+}
+.port-submit input[type="text"] {
+    padding-bottom: 0;
+    height: 40px;
+    padding-right: 50px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+.port-submit select:focus,
+.port-submit textarea:focus,
+.port-submit input:focus {
+    outline: none;
+}
+.port-submit input[type="date"] {
+    border: none;
+    width: auto;
+}
+.port-submit .thumbnail-container {
+    position: relative;
+    width: 250px;
+    height: 107px;
+    margin-top: 10px;
+}
+.port-submit #file {
+    display: none;
+}
+.port-submit .btn-submit,
+.port-submit .btn-date {
+    width: 118px;
+    height: 40px;
+    color:  #0046bf;
+    border: 1px solid #0046bf;
+    background: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.port-submit .thumbnail-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.port-submit .input-cont {
+    margin-top: 17px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    line-height: 30px;
+    color: #000;
+    font-size: 18px;
+    padding: 23px 30px;
+}
+.port-submit button[type="submit"] {
+    margin: 60px auto 0;
+    background-color: #0046bf;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 160px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.port-submit button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1199.9999px) {
+
+
+    /* port-main */
+    .port-list .port-list {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    .port-list .port-item .thumb-area img {
+        width: 100%;
+    }
+    .port-list .port-item .info-area {
+        padding: 19px 20px;
+    }
+    .port-list .port-item .info-area .subtit {
+        line-height: unset;
+        font-size: 14px;
+    }
+    .port-list .port-item .info-area .title {
+        font-size: 15px;
+        line-height: unset;
+        width: 80%;
+    }
+    .port-list .port-item .info-area .date {
+        line-height: unset;
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+
+    /* port-detail */
+    .port-detail .sc-detail .category {
+        margin-top: 29px;
+        font-size: 14px;
+    }
+    .port-detail .sc-detail .title {
+        font-size: 22px;
+        line-height: unset;
+    }
+    .port-detail .sc-detail .date {
+        margin-top: 12px;
+    }
+    .port-detail .sc-detail .navigation {
+        background: transparent;
+        margin-top: 0;
+        padding: 34px 41px;
+    }
+    .port-detail .sc-detail .navigation a span {
+        display: none;
+    }
+    .port-detail .sc-detail .navigation::after {
+        content: none;
+    }
+    .port-detail .sc-detail .back-to-list {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .port-detail .sc-detail .date {
+        font-size: 12px;
+    }
+    .port-detail .sc-detail .thumb-area {
+        margin-top: 20px;
+    }
+    .port-detail .sc-detail .img-box {
+        flex-wrap: wrap;
+        padding-bottom: 60px;
+        position: relative;
+    }
+    .port-detail .sc-detail .img-box .btn-down {
+        position: absolute;
+        margin-left: 0;
+        bottom: 0;
+    }
+    .port-detail .sc-detail .img-box .desc {
+        font-size: 14px;
+    }
+    .port-detail .sc-detail .img-box .img-tit {
+        color: #666;
+    }
+    .port-detail .sc-detail .info-area p {
+        font-size: 15px;
+        line-height: unset;
+    }
+    .port-detail .sc-detail .back-to-list a {
+        width: 120px;
+        height: 42px;
+        font-size: 16px;
+        letter-spacing: -0.05em;
+    }
+
+
+    /* port-admin-list */
+    .port-admin-list .pcDisplay {
+        display: none;
+    }
+    .port-admin-list .nopcDisplay {
+        display: block;
+    }
+    .port-admin-list .nopcDisplay .admin-list {       
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    .port-admin-list .nopcDisplay .admin-item {
+        width: 100%;
+        height: 100%;
+    }
+    .port-admin-list .nopcDisplay .admin-item > div {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .port-admin-list .nopcDisplay .container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+    .port-admin-list .nopcDisplay .title-section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .port-admin-list .nopcDisplay .title-number {
+        margin-right: 5px;
+    }
+    .port-admin-list .nopcDisplay .title-text {
+        flex: 1;
+    }
+    .port-admin-list .nopcDisplay .content-section {
+        margin-top: 10px;
+    }
+    .port-admin-list .nopcDisplay .subtitle {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .port-admin-list .nopcDisplay .filename {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .port-admin-list .nopcDisplay .image-and-date {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .port-admin-list .nopcDisplay .thumbnail-label {
+        width: 90px;
+        height: 38px;
+        margin-right: 10px;
+    }
+    .port-admin-list .nopcDisplay .date {
+        font-size: 14px;
+    }
+    .port-admin-list .nopcDisplay input[type="checkbox"] + label {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 13px;
+        right: 21px;
+    }
+
+
+
+
+    /* port-admin-view */
+    .port-admin-view .container .container-cont {
+        padding: 0;
+    }
+    .port-admin-view label {
+        font-size: 16px;
+        margin-bottom: 16px;
+        display: block;
+        line-height: normal;
+    }
+    .port-admin-view .btn-admin-file,
+    .port-admin-view .btn-admin-thumb,
+    .port-admin-view .btn-admin-date {
+        width: 85px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .port-admin-view .container .container-cont {
+        background: transparent;
+    }
+    .port-admin-view .input-cont {
+        margin-top: 16px;
+        font-size: 15px;
+        padding: 20px;
+    }
+    .port-admin-view .form-group {
+        margin-bottom: 30px;
+    }
+    .port-admin-view .thumbnail-container {
+        width: 210px;
+        height: auto;
+    }
+    .port-admin-view .thumbnail span {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .port-admin-view .form-group .txt {
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+        margin-top: 16px;
+    }
+    .port-admin-view .form-group .txt > div {
+        flex: none;
+        width: 100%;
+    }
+    .port-admin-view .form-group .txt span {
+        margin-top: 4px;
+        font-size: 15px;
+    } 
+    .port-admin-view .txt label {
+        margin-bottom: 0;
+    }
+    .port-admin-view p {
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: normal;
+    }
+    .port-admin-view .form-group:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .port-admin-view label.thumbnail-label {
+        margin-top: 16px;
+        margin-bottom: 11px;
+    }
+    .port-admin-view .form-group.date .group-cont {
+        margin-top: 16px;
+    }
+
+
+
+    
+
+    /* port-submit */
+    .port-submit .container .container-cont {
+        padding: 0;
+    }
+    .port-submit label {
+        font-size: 16px;
+        margin-bottom: 16px;
+        display: block;
+        line-height: normal;
+    }
+    .port-submit .btn-submit,
+    .port-submit .btn-date {
+        width: 85px;
+        height: 30px;
+        font-size: 12px;
+    }
+    .port-submit .container .container-cont {
+        background: transparent;
+    }
+    .port-submit .input-cont {
+        margin-top: 16px;
+        font-size: 15px;
+        padding: 20px;
+    }
+    .port-submit .form-group {
+        margin-bottom: 30px;
+    }
+    .port-submit .thumbnail-container {
+        width: 210px;
+        height: auto;
+    }
+    .port-submit .thumbnail span {
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .port-submit .form-group .txt {
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+        margin-top: 16px;
+    }
+    .port-submit .form-group .txt > div {
+        flex: none;
+        width: 100%;
+    }
+    .port-submit .form-group .txt span {
+        margin-top: 4px;
+        font-size: 15px;
+    } 
+    .port-submit .txt label {
+        margin-bottom: 0;
+    }
+    .port-submit p {
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: normal;
+    }
+    .port-submit .form-group:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    .port-submit label.thumbnail-label {
+        margin-top: 16px;
+        margin-bottom: 11px;
+    }
+    .port-submit .form-group.date .group-cont {
+        margin-top: 16px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile */
+@media (max-width: 768.999px) {
+
+
+    /* port-main */
+    .port-list .select-box {
+        margin-top: 12px;
+        align-items: start;
+    }
+    .port-list .custom-select-wrapper,
+    .port-list .select-box input,
+    .port-list form {
+        width: 100%;
+    }
+    .port-list .sc-port .headline {
+        font-size: 32px;
+    }
+    .port-list .select-box fieldset {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .port-list .select-box {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+    .port-list .select-box p {
+        margin-top: 28px;
+    }
+    .port-list .select-box input,
+    .port-list .custom-select-wrapper {
+        width: 100%;
+        height: 42px;
+    }
+    .port-list .port-list {
+        margin-top: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .port-list .port-none div {
+        margin-top: 17px;
+    }
+
+
+
+    /* port-admin-list */
+    .port-admin-list .select-box fieldset {
+        flex-direction: column;
+    }
+    .port-admin-list .nopcDisplay .admin-list {       
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .port-admin-list .custom-select-wrapper,
+    .port-admin-list .select-box input,
+    .port-admin-list form {
+        width: 100%;
+        height: 42px;
+    }
+    .port-admin-list .control-box .btn button {
+        width: 85px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .port-submit .port-title {
+        font-size: 32px;
+    }
+
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커리어도트(제출하기)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/port.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./assets/js/index.js" defer></script>
+</head>
+<body>
+    <div class="port-submit">
+        <header>
+            <div class="header-inner">
+                <h1>
+                    <a href="index.html"><img src="./assets/img/logo.png" alt="로고" class="logo-pc"></a>
+                    <a href="index.html"><img src="./assets/img/logo-mo.png" alt="로고" class="logo-mo"></a>
+                    <span class="blind">로고</span>
+                </h1>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-menu-cont"> 
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a href="index.html">
+                                <img src="./assets/img/logo.png" alt="로고" class="logo-pc">
+                                <img src="./assets/img/logo-mo.png" alt="로고" class="logo-mo">
+                            </a>
+                            <a href="#none" class="btn-close">
+                                <img src="./assets/img/ico-close.png" alt="닫기버튼">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <div class="toggle_menu_list_modal">
+                                <ul>
+                                    <li>
+                                        <a href="service.html" class="depth1">사업영역</a>
+                                        <ul class="modal-sub-menu">
+                                            <li><a href="service01.html">대학생 진로교육</a></li>
+                                            <li><a href="service02.html">대학생 취업교육</a></li>
+                                            <li><a href="service03.html">RIS(E) 특화교육</a></li>
+                                            <li><a href="service04.html">맞춤형 콘텐츠 개발</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="port-list.html" class="depth1">Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href="port-submit.html" class="depth1">제출하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav id="gnb">
+                    <ul class="gnb-list">
+                        <li class="gnb-item">
+                            <a href="service.html">사업영역</a>
+                            <ul class="sub-menu">
+                                <li><a href="service01.html">대학생 진로교육</a></li>
+                                <li><a href="service02.html">대학생 취업교육</a></li>
+                                <li><a href="service03.html">RIS(E) 특화교육</a></li>
+                                <li><a href="service04.html">맞춤형 콘텐츠 개발</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item"><a href="port-list.html">Portfolio</a></li>
+                        <li class="gnb-item active"><a href="port-submit.html">제출하기</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="inner">
+                <h2 class="port-title">제출하기</h2>
+                <div class="container">
+                    <form>
+                        <div class="container-cont">
+                            <div class="form-group cate">
+                                <p>구분</p>
+                                <select id="category" name="category">
+                                    <option value="option1">직무&기업가이드북</option>
+                                    <option value="option2">옵션2</option>
+                                    <option value="option3">옵션3</option>
+                                </select>
+                            </div>
+                            <div class="form-group title">
+                                <p>제목</p>
+                                <input type="text" id="title" name="title" value="2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로">
+                                <button type="button" class="remove-btn"></button>
+                            </div>
+                            <div class="form-group file">
+                                <p>파일</p>
+                                <div class="txt">
+                                    <label for="file" class="btn-submit">등록하기</label>
+                                    <input type="file" name="file" id="file">
+                                    <div>
+                                        <span>alsjfklajsklfjalsjfklajsklfjalsjfklajalsjfklajsalsjfklajsklfjalsjfklajsklfjalsjfklajsklfjklfjalsjfklajsklfjalsjfklasklfjalsjfklajsklfjklfjalsjfklajsklfjalsjfklasklfjalsjfklajsklfjklfjalsjfklajsklfjalsjfklajsklfjalsjfklajsklfjssklfjalsjfklajsklfjalsjfklajsklfjalsjfklajsklfj.jpg</span>
+                                        <button type="button" class="remove-btn"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group date">
+                                <p>등록일</p>
+                                <div class="group-cont">
+                                    <button class="btn-date">날짜변경</button>
+                                    <span class="date-display" id="date-display">2024.06.30</span>
+                                    <input type="date" id="date" name="date" style="display: none;">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p>내용</p>
+                                <textarea id="content" name="content" rows="6" class="input-cont" placeholder="내용을 입력하세요."></textarea>
+                            </div>
+                        </div>
+                        <button type="submit">등록</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h2 class="blind">커리어도트 푸터</h2>
+            <div class="inner">
+                <div class="logo-area">
+                    <a href="index.html">
+                        <img src="./assets/img/footer-logo.png" alt="커리어도트 푸터 로고" class="footer-pc">
+                        <img src="./assets/img/footer-logo-m.png" alt="커리어도트 푸터 로고" class="footer-mo">
+                    </a>
+                </div>
+                <div class="info-area">
+                    <a href="tel:02-2088-5542">
+                        <span>TEL 02-2088-5542</span>
+                    </a>
+                    <a href="mailto:careerdot@careerdot.co.kr">
+                        <span>EMAIL careerdot@careerdot.co.kr</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

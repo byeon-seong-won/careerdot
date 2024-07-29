@@ -1,0 +1,182 @@
+
+
+
+.login-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+}
+.login-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-width: 500px;
+}
+.group-login {
+    min-height: auto;
+    width: 100%;
+}
+.group-login > div {
+    margin: 33px auto 0;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 20px;
+    background: #fff;
+    overflow: hidden;
+    padding: 65px 48px 60px;
+}
+.group-login form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.group-login form a {
+    display: block;
+}
+.group-login form,
+.group-login fieldset {
+    width: 100%;
+}
+.group-login fieldset .login-id,
+.group-login fieldset .login-pw {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-bottom: 2px solid #000;
+}
+.group-login fieldset .login-id:after,
+.group-login fieldset .login-pw:after  {
+    content: '';
+    background: url(../img/ico-del.png) no-repeat center / 100%;
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.group-login fieldset .login-pw {
+    margin-top: 27px;
+}
+.group-login input {
+    width: 100%;
+    height: 100%;
+    padding-left: 40px;
+}
+.group-login input:focus {
+    outline: none;
+}
+.group-login input:focus::placeholder {
+    opacity: 0;
+}
+.group-login input::placeholder {
+    font-size: 20px;
+    color: #aaaaaa;
+    line-height: 26px;
+}
+.group-login .login-id::before {
+    content: '';
+    background: url(../img/ico-id.png) no-repeat center / 100%;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 20px;
+}
+.group-login .login-pw::before {
+    content: '';
+    background: url(../img/ico-pw.png) no-repeat center / 100%;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    width: 19px;
+    height: 24px;
+}
+.group-login .btn-login {
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    background: #0046bf;
+    font-weight: bold;
+    margin-top: 23px;
+}
+.group-login .link-find {
+    margin: 17px 0 0;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: -0.05em;
+    line-height: 26px;
+}
+
+
+/* 로그인 실패시 */
+.group-login .fail-txt {
+    margin-top: 9px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ca2828;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+/* mobile */
+@media (max-width: 768.999px) {
+
+    .group-login > div {
+        padding: 40px 20px;
+        border-radius: 10px;
+    }
+    .group-login .btn-login {
+        height: 42px;
+    }
+    .group-login form {
+        align-items: center;
+    }
+    .group-login .link-find {
+        font-size: 12px;
+        margin: 12px 0 0;
+        line-height: normal;
+    }
+    .group-login .btn-login {
+        margin-top: 28px;
+    }
+    .group-login input::placeholder {
+        font-size: 16px;
+    }
+    .group-login fieldset .login-id, .group-login fieldset .login-pw {
+        height: 42px;
+    }
+    .group-login fieldset .login-pw {
+        margin-top: 12px;
+    }
+    .group-login fieldset .login-id:after, .group-login fieldset .login-pw:after {
+        width: 18px;
+        height: 18px;
+    }
+    .group-login .fail-txt {
+        font-size: 12px;
+        line-height: normal;
+        margin-top: 17px;
+    }
+    .group-login input {
+        padding-left: 31px;
+    }
+
+}

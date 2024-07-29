@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>커리어도트(포폴리스트)</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/port.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./assets/js/index.js" defer></script>
+</head>
+<body>
+    <div class="port-list">
+        <header>
+            <div class="header-inner">
+                <h1>
+                    <a href="index.html"><img src="./assets/img/logo.png" alt="로고" class="logo-pc"></a>
+                    <a href="index.html"><img src="./assets/img/logo-mo.png" alt="로고" class="logo-mo"></a>
+                    <span class="blind">로고</span>
+                </h1>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-menu-cont"> 
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a href="index.html">
+                                <img src="./assets/img/logo.png" alt="로고" class="logo-pc">
+                                <img src="./assets/img/logo-mo.png" alt="로고" class="logo-mo">
+                            </a>
+                            <a href="#none" class="btn-close">
+                                <img src="./assets/img/ico-close.png" alt="닫기버튼">
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <div class="toggle_menu_list_modal">
+                                <ul>
+                                    <li>
+                                        <a href="service.html" class="depth1">사업영역</a>
+                                        <ul class="modal-sub-menu">
+                                            <li><a href="service01.html">대학생 진로교육</a></li>
+                                            <li><a href="service02.html">대학생 취업교육</a></li>
+                                            <li><a href="service03.html">RIS(E) 특화교육</a></li>
+                                            <li><a href="service04.html">맞춤형 콘텐츠 개발</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="port-list.html" class="depth1">Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href="port-submit.html" class="depth1">제출하기</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav id="gnb">
+                    <ul class="gnb-list">
+                        <li class="gnb-item">
+                            <a href="service.html">사업영역</a>
+                            <ul class="sub-menu">
+                                <li><a href="service01.html">대학생 진로교육</a></li>
+                                <li><a href="service02.html">대학생 취업교육</a></li>
+                                <li><a href="service03.html">RIS(E) 특화교육</a></li>
+                                <li><a href="service04.html">맞춤형 콘텐츠 개발</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-item active"><a href="port-list.html">Portfolio</a></li>
+                        <li class="gnb-item"><a href="port-submit.html">제출하기</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="inner">
+                <section class="sc-port">
+                    <h2 class="headline">Portfolio</h2>
+                    <div class="select-box">
+                        <p>총 <strong>667</strong>개</p>
+                        <form>
+                            <fieldset>
+                                <legend class="blind">검색어를 입력하세요</legend>
+                                <!-- select box 추가 -->
+                                <div class="custom-select-wrapper">
+                                    <select id="select1" name="select1" class="custom-select">
+                                        <option value="">All</option>
+                                        <option value="option1">옵션 1</option>
+                                        <option value="option2">옵션 2</option>
+                                        <option value="option3">옵션 3</option>
+                                    </select>
+                                </div>
+                                <!-- 검색창 추가 -->
+                                <label for="search">
+                                    <input type="text" name="search" id="search" placeholder="검색어를 입력하세요">
+                                    <span class="ico-search"></span>
+                                </label>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="port-find">
+                        <ul class="port-list">
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">취업교육</span>
+                                        <p class="title">제주대학교_계역 및 학과(전공)별 
+                                            진로취업 모듈 구축 제목이길때 제목이길때제목이길때
+                                            제주대학교_계역 및 학과(전공)별 
+                                            진로취업 모듈 구축 제목이길때 제목이길때제목이길때</p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">직무&기업가이드북</span>
+                                        <p class="title">2차전지 융합전공 직무&기업 
+                                            가이드북
+                                            </p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">취업교육</span>
+                                        <p class="title">제주대학교_계역 및 학과(전공)별 
+                                            진로취업 모듈 구축 제목이길때 제목이길때제목이길때</p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">직무&기업가이드북</span>
+                                        <p class="title">2차전지 융합전공 직무&기업 
+                                            가이드북
+                                            </p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">취업교육</span>
+                                        <p class="title">제주대학교_계역 및 학과(전공)별 
+                                            진로취업 모듈 구축 제목이길때 제목이길때제목이길때</p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">취업교육</span>
+                                        <p class="title">제주대학교_계역 및 학과(전공)별 
+                                            진로취업 모듈 구축 제목이길때 제목이길때제목이길때</p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">직무&기업가이드북</span>
+                                        <p class="title">2차전지 융합전공 직무&기업 
+                                            가이드북
+                                            </p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">취업교육</span>
+                                        <p class="title">제주대학교_계역 및 학과(전공)별 
+                                            진로취업 모듈 구축 제목이길때 제목이길때제목이길때</p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="port-item">
+                                <div onclick="location.href='port-detail.html'">
+                                    <div class="thumb-area">
+                                        <img src="./assets/img/porfolio-img.png" alt="포트폴리오 이미지">
+                                    </div>
+                                    <div class="info-area">
+                                        <span class="subtit">취업교육</span>
+                                        <p class="title">제주대학교_계역 및 학과(전공)별 
+                                            진로취업 모듈 구축 제목이길때 제목이길때제목이길때</p>
+                                        <span class="date">2024.06.26</span>
+                                        <button class="btn-down" onclick="showAlert(event)"></button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="pagination">
+                            <button class="btn-first"></button>
+                            <button class="btn-prev"></button>
+                            <ul class="page-list">
+                                <li class="page-item active"><a href="#">1</a></li>
+                                <li class="page-item"><a href="#">2</a></li>
+                                <li class="page-item"><a href="#">3</a></li>
+                                <li class="page-item"><a href="#">4</a></li>
+                                <li class="page-item"><a href="#">5</a></li>
+                            </ul>
+                            <button class="btn-next"></button>
+                            <button class="btn-last"></button>
+                        </div>
+                    </div>
+                    <div class="port-none" style="display: none;">
+                        <div>
+                            <img src="./assets/img/search-none.png" alt="검색결과 없습니다.">
+                            <p><strong>"자몽랩"</strong>에 대한 검색결과가 없습니다.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <h2 class="blind">커리어도트 푸터</h2>
+            <div class="inner">
+                <div class="logo-area">
+                    <a href="index.html">
+                        <img src="./assets/img/footer-logo.png" alt="커리어도트 푸터 로고" class="footer-pc">
+                        <img src="./assets/img/footer-logo-m.png" alt="커리어도트 푸터 로고" class="footer-mo">
+                    </a>
+                </div>
+                <div class="info-area">
+                    <a href="tel:02-2088-5542">
+                        <span>TEL 02-2088-5542</span>
+                    </a>
+                    <a href="mailto:careerdot@careerdot.co.kr">
+                        <span>EMAIL careerdot@careerdot.co.kr</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
