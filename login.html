@@ -23,25 +23,36 @@
             </header>
             <main class="group-login">
                 <!-- 로그인 기본 화면 -->
-                <div class="login-def">
+                <div class="login-def" style="display: none;">
                     <form>
                         <fieldset>  
                             <legend class="blind">로그인</legend>
-                            <div class="login-id"><input type="text" placeholder="아이디를 입력하세요."></div>
-                            <div class="login-pw"><input type="password" placeholder="비밀번호를 입력하세요."></div>
-                            <a href="#" class="link-find">비밀번호 찾기</a>
+                            <div class="login-id">
+                                <input type="text" placeholder="아이디를 입력하세요." id="loginId">
+                                <span class="clear-btn" id="clearLoginId"></span>
+                            </div>
+                            <div class="login-pw">
+                                <input type="password" placeholder="비밀번호를 입력하세요." id="loginPw">
+                                <span class="clear-btn" id="clearLoginPw"></span>
+                            </div>
                             <button class="btn-login" aria-label="로그인">로그인</button>
                         </fieldset>
                     </form>
                 </div>
                 <!-- 로그인 실패시-->
-                <div class="login-fail" style="display: none;">
+                <div class="login-fail">
                     <form>
                         <fieldset>  
                             <legend class="blind">로그인</legend>
-                            <div class="login-id"><input type="text" placeholder="아이디를 입력하세요."></div>
-                            <div class="login-pw"><input type="password" placeholder="비밀번호를 입력하세요."></div>
-                            <a href="#" class="link-find">비밀번호 찾기</a>
+                            <div class="login-id">
+                                <input type="text" placeholder="아이디를 입력하세요." id="failId">
+                                <span class="clear-btn" id="clearfailId"></span>
+                            </div>
+                            <div class="login-pw">
+                                <input type="password" placeholder="비밀번호를 입력하세요." id="failPw">
+                                <span class="clear-btn" id="clearfailPw"></span>
+                            </div>
+                            <!-- <a href="#" class="link-find">비밀번호 찾기</a> -->
                             <div class="fail-txt">
                                 아이디(로그인 전용 아이디) 또는 비밀번호를 잘못 입력했습니다.<br>
                                 입력하신 내용을 다시 확인해주세요.

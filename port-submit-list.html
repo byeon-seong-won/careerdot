@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>커리어도트(어드민리스트)</title>
+  <title>제출하기 리스트</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./assets/css/layout.css">
   <link rel="stylesheet" href="./assets/css/port.css">
@@ -12,7 +12,7 @@
   <script src="./assets/js/index.js" defer></script>
 </head>
 <body>
-    <div class="port-admin-list admin">
+    <div class="port-submit-list">
         <header>
             <div class="header-inner">
                 <h1>
@@ -40,14 +40,19 @@
                             <div class="toggle_menu_list_modal">
                                 <ul>
                                     <li>
+                                        <a href="service.html" class="depth1">사업영역</a>
+                                        <ul class="modal-sub-menu">
+                                            <li><a href="service01.html">대학생 진로교육</a></li>
+                                            <li><a href="service02.html">대학생 취업교육</a></li>
+                                            <li><a href="service03.html">RIS(E) 특화교육</a></li>
+                                            <li><a href="service04.html">맞춤형 콘텐츠 개발</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
                                         <a href="port-list.html" class="depth1">Portfolio</a>
                                     </li>
                                     <li>
                                         <a href="port-submit-list.html" class="depth1">제출하기</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="depth1">로그아웃</a>
-                                        <a href="#" class="depth1" style="display: none;">로그인</a>
                                     </li>
                                 </ul>
                             </div>
@@ -56,12 +61,17 @@
                 </div>
                 <nav id="gnb">
                     <ul class="gnb-list">
-                        <li class="gnb-item active"><a href="service.html">Portfolio</a></li>
-                        <li class="gnb-item"><a href="port-submit-list.html">제출하기</a></li>
-                        <li class="gnb-item logout">
-                            <a href="#">로그아웃</a>
-                            <a href="#" style="display: none;">로그인</a>
+                        <li class="gnb-item">
+                            <a href="service.html">사업영역</a>
+                            <ul class="sub-menu">
+                                <li><a href="service01.html">대학생 진로교육</a></li>
+                                <li><a href="service02.html">대학생 취업교육</a></li>
+                                <li><a href="service03.html">RIS(E) 특화교육</a></li>
+                                <li><a href="service04.html">맞춤형 콘텐츠 개발</a></li>
+                            </ul>
                         </li>
+                        <li class="gnb-item"><a href="port-list.html">Portfolio</a></li>
+                        <li class="gnb-item active"><a href="port-submit-list.html">제출하기</a></li>
                     </ul>
                 </nav>
             </div>
@@ -96,13 +106,13 @@
                     <p>총<strong>667</strong>개</p>
                     <div class="btn">
                         <button class="del">삭제</button>
-                        <button class="reg">등록</button>
+                        <button class="reg">파일다운로드</button>
                     </div>
                 </div>
                 <div class="cont-box">
                     <!-- pc일때 테이블 -->
                     <div class="pcDisplay">
-                        <table id="contboxId">
+                        <table id="submitboxId">
                             <thead>
                                 <tr>
                                     <th>
@@ -115,15 +125,14 @@
                                     <th>구분</th>
                                     <th>제목</th>
                                     <th>파일</th>
-                                    <th>썸네일</th>
                                     <th>등록일자</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk01">
-                                        <label for="chk01">
+                                        <input type="checkbox" id="smchk01">
+                                        <label for="smchk01">
                                             <span></span>
                                         </label>
                                     </td>
@@ -131,13 +140,12 @@
                                     <td>직무&기업가이드북</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk02">
-                                        <label for="chk02">
+                                        <input type="checkbox" id="smchk02">
+                                        <label for="smchk02">
                                             <span></span>
                                         </label>
                                     </td>
@@ -145,13 +153,12 @@
                                     <td>취업교육</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk03">
-                                        <label for="chk03">
+                                        <input type="checkbox" id="smchk03">
+                                        <label for="smchk03">
                                             <span></span>
                                         </label>
                                     </td>
@@ -159,13 +166,12 @@
                                     <td>진로교육</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk04">
-                                        <label for="chk04">
+                                        <input type="checkbox" id="smchk04">
+                                        <label for="smchk04">
                                             <span></span>
                                         </label>
                                     </td>
@@ -173,13 +179,12 @@
                                     <td>교육행사</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk05">
-                                        <label for="chk05">
+                                        <input type="checkbox" id="smchk05">
+                                        <label for="smchk05">
                                             <span></span>
                                         </label>
                                     </td>
@@ -187,13 +192,12 @@
                                     <td>직무&기업가이드북</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk06">
-                                        <label for="chk06">
+                                        <input type="checkbox" id="smchk06">
+                                        <label for="smchk06">
                                             <span></span>
                                         </label>
                                     </td>
@@ -201,13 +205,12 @@
                                     <td>진로교육</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk07">
-                                        <label for="chk07">
+                                        <input type="checkbox" id="smchk07">
+                                        <label for="smchk07">
                                             <span></span>
                                         </label>
                                     </td>
@@ -215,13 +218,12 @@
                                     <td>교육행사</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk08">
-                                        <label for="chk08">
+                                        <input type="checkbox" id="smchk08">
+                                        <label for="smchk08">
                                             <span></span>
                                         </label>
                                     </td>
@@ -229,13 +231,12 @@
                                     <td>직무&기업가이드북</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk09">
-                                        <label for="chk09">
+                                        <input type="checkbox" id="smchk09">
+                                        <label for="smchk09">
                                             <span></span>
                                         </label>
                                     </td>
@@ -243,13 +244,12 @@
                                     <td>취업교육</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <input type="checkbox" id="chk10">
-                                        <label for="chk10">
+                                        <input type="checkbox" id="smchk10">
+                                        <label for="smchk10">
                                             <span></span>
                                         </label>
                                     </td>
@@ -257,7 +257,6 @@
                                     <td>직무&기업가이드북</td>
                                     <td class="img-tit"><div>2차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로차전지 융합전공 직무&기업 가이드북, 제목만완쪽정렬로</div></td>
                                     <td class="img-tit file"><div>asjflkasjflkasasjflkasjflkasjdfljalpjdfljalpasjflkasjflkasasjflkasjflkasjdfljalpjdfljalp</div></td>
-                                    <td class="img-td"><img src="./assets/img/admin-thumb.png" alt="썸네일"></td>
                                     <td>2024.06.28</td>
                                 </tr>
                             </tbody>
@@ -265,15 +264,15 @@
                     </div>
                     <!-- pc아닐때 리스트 -->
                     <div class="nopcDisplay">
-                        <ul class="admin-list">
-                            <li class="admin-item">
+                        <ul class="submit-list">
+                            <li class="submit-item">
                                 <div>
                                     <div class="container">
                                         <div class="title-section">
                                             <span class="title-number">10.</span>
                                             <span class="title-text">직무&기업가이드북</span>
-                                            <input type="checkbox" id="mochk01">
-                                            <label for="mochk01">
+                                            <input type="checkbox" id="mosmchk01">
+                                            <label for="mosmchk01">
                                                 <span></span>
                                             </label>
                                         </div>
@@ -290,14 +289,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="admin-item">
+                            <li class="submit-item">
                                 <div>
                                     <div class="container">
                                         <div class="title-section">
                                             <span class="title-number">09.</span>
                                             <span class="title-text">직무&기업가이드북</span>
-                                            <input type="checkbox" id="mochk02">
-                                            <label for="mochk02">
+                                            <input type="checkbox" id="mosmchk02">
+                                            <label for="mosmchk02">
                                                 <span></span>
                                             </label>
                                         </div>
@@ -314,14 +313,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="admin-item">
+                            <li class="submit-item">
                                 <div>
                                     <div class="container">
                                         <div class="title-section">
                                             <span class="title-number">08.</span>
                                             <span class="title-text">직무&기업가이드북</span>
-                                            <input type="checkbox" id="mochk03">
-                                            <label for="mochk03">
+                                            <input type="checkbox" id="mosmchk03">
+                                            <label for="mosmchk03">
                                                 <span></span>
                                             </label>
                                         </div>
@@ -338,14 +337,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="admin-item">
+                            <li class="submit-item">
                                 <div>
                                     <div class="container">
                                         <div class="title-section">
                                             <span class="title-number">07.</span>
                                             <span class="title-text">직무&기업가이드북</span>
-                                            <input type="checkbox" id="mochk04">
-                                            <label for="mochk04">
+                                            <input type="checkbox" id="mosmchk04">
+                                            <label for="mosmchk04">
                                                 <span></span>
                                             </label>
                                         </div>
@@ -362,14 +361,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="admin-item">
+                            <li class="submit-item">
                                 <div>
                                     <div class="container">
                                         <div class="title-section">
                                             <span class="title-number">06.</span>
                                             <span class="title-text">직무&기업가이드북</span>
-                                            <input type="checkbox" id="mochk05">
-                                            <label for="mochk05">
+                                            <input type="checkbox" id="mosmchk05">
+                                            <label for="mosmchk05">
                                                 <span></span>
                                             </label>
                                         </div>
@@ -386,14 +385,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="admin-item">
+                            <li class="submit-item">
                                 <div>
                                     <div class="container">
                                         <div class="title-section">
                                             <span class="title-number">05.</span>
                                             <span class="title-text">직무&기업가이드북</span>
-                                            <input type="checkbox" id="mochk06">
-                                            <label for="mochk06">
+                                            <input type="checkbox" id="mosmchk06">
+                                            <label for="mosmchk06">
                                                 <span></span>
                                             </label>
                                         </div>

@@ -347,21 +347,21 @@
 
 
 /* port-admin 공통 */
-.admin .gnb-item.logout {
+.admin #gnb .gnb-item.logout {
     border: 1px solid #000;
     border-radius: 4px;
     width: 118px;
     height: 40px;
     font-size: 16px;
 }
-.admin .gnb-item.logout a {
+.admin #gnb .gnb-item.logout a {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
 }
-.admin .gnb-item:not(:first-child) {
+.admin #gnb .gnb-item:not(:first-child) {
     margin-left: 70px;
 }
 
@@ -405,6 +405,7 @@
     height: 38px;
     border-radius: 4px;
 }
+.port-admin-list table tr:hover,
 .port-admin-list table tr.click {
     background: #eff8ff;
 }
@@ -513,7 +514,6 @@
 .port-admin-list .control-box  strong {
     font-weight: bold;
 }
-
 .port-admin-list .control-box .btn button {
     font-size: 16px;
     font-weight: bold;
@@ -529,7 +529,6 @@
     background: #0046bf;
     color: #fff;
 }
-
 .port-admin-list .pagination-box {
     display: flex;
     align-items: center;
@@ -901,11 +900,347 @@
 
 
 
+/* ///////// port-submit-list ///////// */
+.port-submit-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.port-submit-list th, 
+.port-submit-list td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 18px 0 19px;
+}
+.port-submit-list th {
+    border-top: 2px solid #000;
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+.port-submit-list table td {
+    cursor: pointer;
+}
+.port-submit-list table td:nth-child(1),
+.port-submit-list table td:nth-child(2) {
+    width: 70px;
+}
+.port-submit-list table td img {
+    width: 88px;
+    height: 38px;
+    border-radius: 4px;
+}
+.port-submit-list table tr:hover,
+.port-submit-list table tr.click {
+    background: #eff8ff;
+}
+.port-submit-list table .img-tit div {
+    margin: 0 auto;
+    width: 373px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-size: 18px;
+}
+.port-submit-list table .img-tit.file div {
+    font-weight: normal;
+    width: 200px;
+}
+.port-submit-list table .img-td {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.port-submit-list .select-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+.port-submit-list .select-box strong {
+    font-weight: bold;
+}
+.port-submit-list .select-box select {
+    margin-right: 25px;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+.port-submit-list .select-box fieldset {
+    display: flex;
+    gap: 24px;
+}
+.port-submit-list .select-box input {
+    border-bottom: 2px solid #000;
+    height: 100%;
+    width: 245px;
+}
+.port-submit-list .select-box label {
+    position: relative;
+}
+.port-submit-list .select-box .ico-search {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 15px;
+    background: url(../img/ico-search.png) no-repeat center / 100%;
+}
+.port-submit-list input[type="text"]:focus {
+    outline: none;
+}
+.port-submit-list input[type="text"]:focus::placeholder {
+    opacity: 0;
+}
+.port-submit-list .custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 210px;
+    cursor: pointer;
+}
+.port-submit-list .custom-select-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 14px;
+    height: 10px;
+    transform: translateY(-50%);
+    background: url(../img/ico-drop.png) no-repeat center / 100%;
+}
+.port-submit-list .custom-select-wrapper:focus {
+    border-bottom: 2px solid #000;
+    outline: none;
+}
+.port-submit-list .custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    padding: 10px 10px 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+.custom-select:focus {
+    border-color: #007BFF;
+    background-color: #e7f3ff;
+    outline: none;
+}
+.port-submit-list .control-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+.port-submit-list .control-box  strong {
+    font-weight: bold;
+}
+.port-submit-list .control-box .btn button {
+    font-size: 16px;
+    font-weight: bold;
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+}
+.port-submit-list .control-box .btn .del {
+    border: 1px solid #0046bf;
+    color: #0046bf;
+}
+.port-submit-list .control-box .btn .reg {
+    background: #0046bf;
+    color: #fff;
+}
+
+.port-submit-list .pagination-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+.port-submit-list .pagination-box button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #e4e4e4;
+    margin-right: 6px;
+}
+.port-submit-list .pagination-box button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 11px;
+    transform: translate(-50%, -50%);
+}
+.port-submit-list .pagination-box button.btn-first::before {
+    background: url(../img/ico-firstBtn.png) no-repeat center / 100%;
+    width: 8px;
+    height: 12px;
+}
+.port-submit-list .pagination-box button.btn-prev::before {
+    background: url(../img/ico-prevBtn.png) no-repeat center / 100%;
+}
+.port-submit-list .pagination-box button.btn-next::before {
+    background: url(../img/ico-nextBtn.png) no-repeat center / 100%;
+}
+.port-submit-list .pagination-box button.btn-last::before {
+    background: url(../img/ico-lastBtn.png) no-repeat center / 100%;
+    width: 8px;
+    height: 12px;
+}
+.port-submit-list .pagination-box .page-list {
+    margin: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+}
+.port-submit-list .pagination-box .page-item {
+    width: 23px;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+}
+.port-submit-list .pagination-box .page-item a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #888888;
+}
+.port-submit-list .pagination-box .page-item.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+.port-submit-list .pagination-box .page-item.active a {
+    font-weight: bold;
+    color: #000;
+}
+.port-submit-list .pcDisplay {
+    display: block;
+}
+.port-submit-list .nopcDisplay {
+    display: none;
+}
 
 
 
-/* ///////// port-submit ///////// */
-.port-submit .port-title {
+
+/* pc checkbox */
+.port-submit-list .pcDisplay td:nth-child(1) {
+    position: relative;
+}
+.port-submit-list .pcDisplay input[type="checkbox"] { 
+	position:absolute; 
+    width:1px; 
+    height:1px; 
+    padding:0; 
+    margin:-1px; 
+    overflow:hidden; 
+    clip:rect(0,0,0,0); 
+    border:0; 
+}
+.port-submit-list .pcDisplay input[type="checkbox"] + label { 
+	display:inline-block; 
+    position:absolute; 
+    padding-left:26px; 
+    cursor:pointer; 
+    transition: 0.3s;
+}
+.port-submit-list .pcDisplay input[type="checkbox"] + label:before { 
+	content:''; 
+    position:absolute; 
+    left:0; 
+    top:50%;
+    transform: translateY(-50%); 
+    width:28px; 
+    height:28px; 
+    text-align:center; 
+    background:#fff; 
+    border:1px solid #ccc; 
+    box-sizing:border-box; 
+    border-radius: 4px;
+}
+.port-submit-list .pcDisplay input[type="checkbox"]:checked + label:after { 
+	content: ''; 
+    position:absolute; 
+    left:0; 
+    top:50%;
+    transform: translateY(-50%); 
+    width:28px; 
+    height:28px; 
+    background: url(../img/ico-chk.jpg) no-repeat center / 100%;
+    border-radius: 4px;
+}
+
+
+
+/* 모바일 checkbox */
+.port-submit-list .nopcDisplay input[type="checkbox"] { 
+	position:absolute; 
+    width:1px; 
+    height:1px; 
+    padding:0; 
+    margin:-1px; 
+    overflow:hidden; 
+    clip:rect(0,0,0,0); 
+    border:0; 
+}
+.port-submit-list .nopcDisplay input[type="checkbox"] + label { 
+	display:inline-block; 
+    position:relative; 
+    padding-left:26px; 
+    cursor:pointer; 
+    transition: 0.3s;
+}
+.port-submit-list .nopcDisplay input[type="checkbox"] + label:before { 
+	content:''; 
+    position:absolute; 
+    left:0; 
+    top:0; 
+    width:24px; 
+    height:24px; 
+    text-align:center; 
+    background:#fff; 
+    border:1px solid #ccc; 
+    box-sizing:border-box; 
+    border-radius: 4px;
+}
+.port-submit-list .nopcDisplay input[type="checkbox"]:checked + label:after { 
+	content: ''; 
+    position:absolute; 
+    top:0; 
+    left:0; 
+    width:24px; 
+    height:24px; 
+    background: url(../img/ico-chk.jpg) no-repeat center / 100%;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ///////// port-submit-view ///////// */
+.port-submit-view .port-title {
     color: #000;
     margin-top: 67px;
     text-align: center;
@@ -913,45 +1248,45 @@
     font-weight: bold;
     line-height: 70px;
 }
-.port-submit .container {
+/* .port-submit-view .container {
     margin-top: 50px;
-}
-.port-submit .container {
+} */
+.port-submit-view .container {
     margin-top: 60px;
 }
-.port-submit .container .container-cont {
+.port-submit-view .container .container-cont {
     padding: 50px 60px 60px;
     background: #f5f5f5;
     border-radius: 20px;
 }
-.port-submit form {
+.port-submit-view form {
     display: flex;
     flex-direction: column;
 }
-.port-submit .form-group:not(:last-child) {
+.port-submit-view .form-group:not(:last-child) {
     margin-bottom: 55px;
 }
-.port-submit .form-group.title {
+.port-submit-view .form-group.title {
     position: relative;
 }
-.port-submit .form-group.title .remove-btn {
+.port-submit-view .form-group.title .remove-btn {
     position: absolute;
     right: 0;
     bottom: 10px;
 }
-.port-submit .form-group .txt {
+.port-submit-view .form-group .txt {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.port-submit .form-group .txt > div {
+.port-submit-view .form-group .txt > div {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-width: 0;
 }
-.port-submit .form-group .txt span {
+.port-submit-view .form-group .txt span {
     font-size: 18px;
     /* white-space: nowrap;
     overflow: hidden;
@@ -960,15 +1295,15 @@
     width: 90%;
     overflow-wrap: break-word;
 }
-.port-submit .form-group.date .group-cont {
+.port-submit-view .form-group.date .group-cont {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.port-submit .form-group .remove-btn {
+.port-submit-view .form-group .remove-btn {
     position: relative;
 }
-.port-submit .form-group .remove-btn {
+.port-submit-view .form-group .remove-btn {
     background: url(../img/ico-del.png) no-repeat center / 100%;
     display: inline-block;
     margin-left: 10px;
@@ -976,21 +1311,21 @@
     height: 24px;
     cursor: pointer;
 }
-.port-submit .form-group .thumbnail-container {
+.port-submit-view .form-group .thumbnail-container {
     position: relative;
 }
-.port-submit .form-group .thumbnail-container .remove-btn {
+.port-submit-view .form-group .thumbnail-container .remove-btn {
     position: absolute;
     top: -10px;
     right: -10px;
 }
-.port-submit p {
+.port-submit-view p {
     font-size: 24px;
     font-weight: bold;
     line-height: 30px;
     margin-bottom: 15px;
 }
-.port-submit label {
+.port-submit-view label {
     display: block;
     width: 118px;
 }
@@ -1000,27 +1335,27 @@
     font-size: 18px;
     line-height: 26px;
 }
-.port-submit input[type="text"],
-.port-submit input[type="file"],
-.port-submit input[type="date"],
-.port-submit textarea,
-.port-submit select {
+.port-submit-view input[type="text"],
+.port-submit-view input[type="file"],
+.port-submit-view input[type="date"],
+.port-submit-view textarea,
+.port-submit-view select {
     width: 100%;
     padding-bottom: 7px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #000;
 }
-.port-submit textarea:focus::placeholder {
+.port-submit-view textarea:focus::placeholder {
     opacity: 0;
 }
-.port-submit select {
+.port-submit-view select {
     display: block;
     width: 250px;
     padding-bottom: 0;
     height: 40px;
 }
-.port-submit input[type="text"] {
+.port-submit-view input[type="text"] {
     padding-bottom: 0;
     height: 40px;
     padding-right: 50px;
@@ -1029,26 +1364,26 @@
     overflow: hidden;
     width: 100%;
 }
-.port-submit select:focus,
-.port-submit textarea:focus,
-.port-submit input:focus {
+.port-submit-view select:focus,
+.port-submit-view textarea:focus,
+.port-submit-view input:focus {
     outline: none;
 }
-.port-submit input[type="date"] {
+.port-submit-view input[type="date"] {
     border: none;
     width: auto;
 }
-.port-submit .thumbnail-container {
+.port-submit-view .thumbnail-container {
     position: relative;
     width: 250px;
     height: 107px;
     margin-top: 10px;
 }
-.port-submit #file {
+.port-submit-view #file {
     display: none;
 }
-.port-submit .btn-submit,
-.port-submit .btn-date {
+.port-submit-view .btn-submit,
+.port-submit-view .btn-date {
     width: 118px;
     height: 40px;
     color:  #0046bf;
@@ -1063,12 +1398,12 @@
     font-size: 16px;
     font-weight: bold;
 }
-.port-submit .thumbnail-container img {
+.port-submit-view .thumbnail-container img {
     width: 100%;
     height: auto;
     border-radius: 4px;
 }
-.port-submit .input-cont {
+.port-submit-view .input-cont {
     margin-top: 17px;
     background: #fff;
     border-radius: 10px;
@@ -1078,7 +1413,7 @@
     font-size: 18px;
     padding: 23px 30px;
 }
-.port-submit button[type="submit"] {
+.port-submit-view button[type="submit"] {
     margin: 60px auto 0;
     background-color: #0046bf;
     color: #fff;
@@ -1091,7 +1426,7 @@
     font-size: 20px;
     font-weight: bold;
 }
-.port-submit button[type="submit"]:hover {
+.port-submit-view button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
@@ -1372,71 +1707,169 @@
 
     
 
-    /* port-submit */
-    .port-submit .container .container-cont {
+
+
+
+
+    /* port-submit-list */
+    .port-submit-list .pcDisplay {
+        display: none;
+    }
+    .port-submit-list .nopcDisplay {
+        display: block;
+    }
+    .port-submit-list .nopcDisplay .submit-list {       
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    .port-submit-list .nopcDisplay .submit-item {
+        width: 100%;
+        height: 100%;
+    }
+    .port-submit-list .nopcDisplay .submit-item > div {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    .port-submit-list .nopcDisplay .container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+    .port-submit-list .nopcDisplay .title-section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .port-submit-list .nopcDisplay .title-number {
+        margin-right: 5px;
+    }
+    .port-submit-list .nopcDisplay .title-text {
+        flex: 1;
+    }
+    .port-submit-list .nopcDisplay .content-section {
+        margin-top: 10px;
+    }
+    .port-submit-list .nopcDisplay .subtitle {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .port-submit-list .nopcDisplay .filename {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .port-submit-list .nopcDisplay .image-and-date {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .port-submit-list .nopcDisplay .thumbnail-label {
+        width: 90px;
+        height: 38px;
+        margin-right: 10px;
+    }
+    .port-submit-list .nopcDisplay .date {
+        font-size: 14px;
+    }
+    .port-submit-list .nopcDisplay input[type="checkbox"] + label {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 13px;
+        right: 21px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* port-submit-view */
+    .port-submit-view .container .container-cont {
         padding: 0;
     }
-    .port-submit label {
+    .port-submit-view label {
         font-size: 16px;
         margin-bottom: 16px;
         display: block;
         line-height: normal;
     }
-    .port-submit .btn-submit,
-    .port-submit .btn-date {
+    .port-submit-view .btn-submit,
+    .port-submit-view .btn-date {
         width: 85px;
         height: 30px;
         font-size: 12px;
     }
-    .port-submit .container .container-cont {
+    .port-submit-view .container .container-cont {
         background: transparent;
     }
-    .port-submit .input-cont {
+    .port-submit-view .input-cont {
         margin-top: 16px;
         font-size: 15px;
         padding: 20px;
     }
-    .port-submit .form-group {
+    .port-submit-view .form-group {
         margin-bottom: 30px;
     }
-    .port-submit .thumbnail-container {
+    .port-submit-view .thumbnail-container {
         width: 210px;
         height: auto;
     }
-    .port-submit .thumbnail span {
+    .port-submit-view .thumbnail span {
         font-size: 12px;
         font-weight: 400;
     }
-    .port-submit .form-group .txt {
+    .port-submit-view .form-group .txt {
         flex-direction: column;
         align-items: start;
         gap: 0;
         margin-top: 16px;
     }
-    .port-submit .form-group .txt > div {
+    .port-submit-view .form-group .txt > div {
         flex: none;
         width: 100%;
     }
-    .port-submit .form-group .txt span {
+    .port-submit-view .form-group .txt span {
         margin-top: 4px;
         font-size: 15px;
     } 
-    .port-submit .txt label {
+    .port-submit-view .txt label {
         margin-bottom: 0;
     }
-    .port-submit p {
+    .port-submit-view p {
         font-size: 16px;
         margin-bottom: 0;
         line-height: normal;
     }
-    .port-submit .form-group:not(:last-child) {
+    .port-submit-view .form-group:not(:last-child) {
         margin-bottom: 30px;
     }
-    .port-submit label.thumbnail-label {
+    .port-submit-view label.thumbnail-label {
         margin-top: 16px;
         margin-bottom: 11px;
     }
-    .port-submit .form-group.date .group-cont {
+    .port-submit-view .form-group.date .group-cont {
         margin-top: 16px;
     }
 
@@ -1519,8 +1952,53 @@
         font-size: 12px;
     }
 
-    .port-submit .port-title {
-        font-size: 32px;
+
+    /* port-admin-view */
+    .port-admin-view button[type="submit"] {
+        font-size: 16px;
+        width: 120px;
+        height: 42px;
     }
 
+
+
+
+
+
+
+
+    /* port-submit-list */
+    .port-submit-list .select-box fieldset {
+        flex-direction: column;
+    }
+    .port-submit-list .nopcDisplay .submit-list {       
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .port-submit-list .custom-select-wrapper,
+    .port-submit-list .select-box input,
+    .port-submit-list form {
+        width: 100%;
+        height: 42px;
+    }
+    .port-submit-list .control-box .btn button {
+        width: 85px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+    /* port-submit-view */
+    .port-submit-view .port-title {
+        font-size: 32px;
+    }
+    .port-submit-view button[type="submit"] {
+        font-size: 16px;
+        width: 120px;
+        height: 42px;
+    }
 }
